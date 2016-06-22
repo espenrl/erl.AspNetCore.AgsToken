@@ -15,7 +15,7 @@
       "url": "https://github.com/espenrl/erl.AspNetCore.AgsToken"
     },
     "projectUrl": "https://github.com/espenrl/erl.AspNetCore.AgsToken",
-    "licenseUrl": "https://github.com/espenrl/erl.AspNetCore.AgsToken/LICENSE",
+    "licenseUrl": "https://github.com/espenrl/erl.AspNetCore.AgsToken/blob/master/LICENSE",
     "requireLicenseAcceptance": false,
     "owners": [ "espenrl" ],
     "tags": [ "ags", "arcgis server" ],
