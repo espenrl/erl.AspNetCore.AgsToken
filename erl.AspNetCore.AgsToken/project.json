@@ -1,0 +1,38 @@
+{
+  "version": "1.0.0-rc2-final",
+  "buildOptions": {
+    "warningsAsErrors": true,
+    "nowarn": [
+      "CS1591"
+    ],
+    "xmlDoc": true
+  },
+  "title": "AGS token middelware for ASP.NET Core",
+  "authors": [ "espenrl" ],
+  "packOptions": {
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/espenrl/erl.AspNetCore.AgsToken"
+    },
+    "projectUrl": "https://github.com/espenrl/erl.AspNetCore.AgsToken",
+    "licenseUrl": "https://github.com/espenrl/erl.AspNetCore.AgsToken/LICENSE",
+    "requireLicenseAcceptance": false,
+    "owners": [ "espenrl" ],
+    "tags": [ "ags", "arcgis server" ],
+    "summary": "Attaches an AGS token to an incoming request."
+  },
+  "description": "ASP.NET Core middelware that will fetch an AGS access token and attach it to the incoming request.",
+  "dependencies": {
+    "Microsoft.AspNetCore.Http.Abstractions": "1.0.0-rc2-final",
+    "Microsoft.Extensions.Options": "1.0.0-rc2-final",
+    "Microsoft.Extensions.Caching.Abstractions": "1.0.0-rc2-final",
+    "System.Runtime.Serialization.Json": "4.0.2-rc2-24027"
+  },
+  "frameworks": {
+    "netstandard1.3": {
+      "dependencies": {
+        "System.Net.Http": "4.0.1-*"
+      }
+    }
+  }
+}

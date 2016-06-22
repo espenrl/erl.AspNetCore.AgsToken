@@ -1,0 +1,26 @@
+# git ignore file
+
+
+# temporarily excluded folders
+
+
+# folders
+packages/
+bin/
+obj/
+csx/
+_ReSharper*/
+*.sln.ide/
+\#*/
+
+
+# files
+*.DotSettings.user
+*.csproj.user
+*.suo
+StyleCop.Cache
+
+
+.vs/
+project.lock.json
+*.xproj.user
