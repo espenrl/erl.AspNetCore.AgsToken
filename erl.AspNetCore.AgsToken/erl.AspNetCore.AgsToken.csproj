@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Version>1.1.0</Version>
+    <AssemblyName>erl.AspNetCore.AgsToken</AssemblyName>
+    <TargetFramework>netstandard1.3</TargetFramework>
+    <NoWarn>$(NoWarn);CS1591</NoWarn>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <!-- NuGet packaging -->
+  <PropertyGroup>
+    <Description>ASP.NET Core middelware that will fetch an ArcGIS Server access token and attach it to the incoming request.</Description>
+    <AssemblyTitle>ArcGIS Server token middelware for ASP.NET Core</AssemblyTitle>
+    <Authors>espenrl</Authors>
+    <PackageId>erl.AspNetCore.AgsToken</PackageId>
+    <PackageTags>ags;arcgis server</PackageTags>
+    <PackageProjectUrl>https://github.com/espenrl/erl.AspNetCore.AgsToken</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/espenrl/erl.AspNetCore.AgsToken/blob/master/LICENSE</PackageLicenseUrl>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/espenrl/erl.AspNetCore.AgsToken</RepositoryUrl>
+  </PropertyGroup>
+
+  <!-- NuGet package references -->
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="1.1.2" />
+    <PackageReference Include="Microsoft.Extensions.Caching.Abstractions" Version="1.1.2" />
+    <PackageReference Include="Microsoft.Extensions.Options" Version="1.1.2" />
+    <PackageReference Include="System.Runtime.Serialization.Json" Version="4.3.0" />
+  </ItemGroup>
+
+</Project>
