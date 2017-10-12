@@ -14,17 +14,12 @@ namespace erl.AspNetCore.AgsToken
 
         public AgsTokenMiddleware(RequestDelegate next, IOptions<AgsOptions> options, IMemoryCache memoryCache)
         {
-            if (next == null)
-            {
-                throw new ArgumentNullException(nameof(next));
-            }
-
             if (options == null)
             {
                 throw new ArgumentNullException(nameof(options));
             }
 
-            _next = next;
+            _next = next ?? throw new ArgumentNullException(nameof(next));
             _memoryCache = memoryCache;
             _options = options.Value;
         }
@@ -32,7 +27,7 @@ namespace erl.AspNetCore.AgsToken
         public async Task Invoke(HttpContext context)
         {
             var token = await _memoryCache.GetOrCreateAsync("token", GetAgsToken);
-            context.Request.QueryString = context.Request.QueryString.Add("token", token);
+            context.Items.Add(HttpContextItemKeys.AgsToken, token);
 
             await _next(context);
         }
@@ -45,7 +40,7 @@ namespace erl.AspNetCore.AgsToken
             var expires = FromUnixTime(tokenData.expires);
             entry.AbsoluteExpiration = expires.AddMinutes(-1);
 
-            return tokenData.token; 
+            return tokenData.token;
         }
 
         private static DateTime FromUnixTime(long unixTime)
