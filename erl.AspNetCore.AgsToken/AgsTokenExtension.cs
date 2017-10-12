@@ -2,7 +2,7 @@ using System;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Options;
 
-namespace Powel.AspNetCore.AgsToken
+namespace erl.AspNetCore.AgsToken
 {
     public static class AgsTokenExtension
     {

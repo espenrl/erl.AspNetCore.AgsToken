@@ -5,7 +5,7 @@ using System.Net.Http.Headers;
 using System.Runtime.Serialization.Json;
 using System.Threading.Tasks;
 
-namespace Powel.AspNetCore.AgsToken
+namespace erl.AspNetCore.AgsToken
 {
     internal static class AgsServer
     {

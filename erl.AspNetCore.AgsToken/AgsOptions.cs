@@ -1,4 +1,4 @@
-namespace Powel.AspNetCore.AgsToken
+namespace erl.AspNetCore.AgsToken
 {
     /// <summary>
     /// Options to configure port, host, instance, username and password settings

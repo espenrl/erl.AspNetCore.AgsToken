@@ -1,4 +1,4 @@
-namespace Powel.AspNetCore.AgsToken
+namespace erl.AspNetCore.AgsToken
 {
     public class AgsTokenResponse
     {
